@@ -1,61 +1,50 @@
-﻿using Atlas.Engine.Components;
-using Atlas.Engine.Entities;
-using Atlas.Engine.Messages;
+﻿using Atlas.ECS.Components;
+using Atlas.ECS.Entities;
+using Atlas.ECS.Objects;
 using AtlasTesting.Testing.Components;
 using AtlasTesting.Testing.Systems;
 using System.Diagnostics;
 
 namespace AtlasTesting
 {
-	class Program
+	static public class Program
 	{
 		static void Main(string[] args)
 		{
-			IEntity root = AtlasEntity.Instance;
-			IEngine engine = root.AddComponent<IEngine>(AtlasEngine.Instance);
-
-			//engine.AddSystemType<ITestSystem, TestSystem>();
-
-			var fam = engine.Families;
-
-			root.AddSystem<ITestSystem>();
-
-			engine.AddSystemType<ITestSystem, TestSystem2>();
-
-			engine.AddListener<IEntityAddMessage>(ListenFor1_1);
+			var root = new AtlasEntity(true);
+			var engine = root.AddComponent<IEngine, JsonEngine>(new JsonEngine());
+			EngineUpdater updater = new EngineUpdater(engine.Update);
 
 			for(int index1 = 1; index1 <= 5; ++index1)
 			{
 				string name = index1.ToString();
-				var depth1 = new AtlasEntity(name, name);
+				var depth1 = root.AddChild(name, name);
+				depth1.AddComponent<ISystemManager>(new SystemManager(typeof(ITestSystem1)));
 				for(int index2 = 1; index2 <= 5; ++index2)
 				{
 					name = index1 + "-" + index2;
 					var depth2 = depth1.AddChild(name, name);
 					depth2.AddComponent<ITestComponent, TestComponent>();
 
-					/*for(int index3 = 1; index3 <= 5; ++index3)
-					{
-						name = index1 + "-" + index2 + "-" + index3;
-						var depth3 = depth2.AddChild(name, name);
-					}*/
 				}
-				root.AddChild(depth1);
 			}
 
-			//Make sure these values are always the same.
-			Debug.WriteLine(engine.Entities);
-			Debug.WriteLine(root.DescendantsToString());
+			//AddChildren(root, 5, 5);
+			Debug.WriteLine(root.DescendantsToString(-1, false));
 
-			engine.IsRunning = true;
+			// var entity = engine.GetEntity("Root-4-0-0");
+			// entity.Message<IMessage<IEntity>>(new Message<IEntity>(entity),
+			// MessageFlow.Root | MessageFlow.Child);
+
+			//updater.IsRunning = true;
 		}
 
-		static private void ListenFor1_1(IEntityAddMessage message)
+		public static void AddChildren(IEntity parent, int children, int depth)
 		{
-			if(message.Value.GlobalName == "1-1")
-			{
-				message.Value.Parent.RemoveChild("1-3");
-			}
+			if(0 == depth--)
+				return;
+			for(var i = 0; i < children; ++i)
+				AddChildren(parent.AddChild(parent.GlobalName + "-" + i), children, depth);
 		}
 	}
 }
