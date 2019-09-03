@@ -1,4 +1,4 @@
-﻿using Atlas.ECS.Components;
+﻿using Atlas.ECS.Components.Component;
 
 namespace AtlasTesting.Testing.Components
 {
