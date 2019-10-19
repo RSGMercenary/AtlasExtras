@@ -13,10 +13,10 @@ namespace AtlasTesting.Testing.Systems
 			DeltaIntervalTime = 5;
 		}
 
-		protected override void FamilyUpdate(float deltaTime)
+		protected override void SystemUpdate(float deltaTime)
 		{
 			Debug.WriteLine($"{GetType().Name} Update");
-			base.FamilyUpdate(deltaTime);
+			base.SystemUpdate(deltaTime);
 		}
 
 		override protected void MemberUpdate(float deltaTime, TestMember member)
