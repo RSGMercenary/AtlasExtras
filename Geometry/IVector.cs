@@ -1,4 +1,4 @@
-﻿namespace AtlasTesting.Framework.Geometry
+﻿namespace AtlasTesting.Geometry
 {
 	interface IReadOnlyVector2
 	{

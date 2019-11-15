@@ -1,9 +1,9 @@
 ﻿using Atlas.ECS.Systems;
-using AtlasTesting.Testing.Components;
-using AtlasTesting.Testing.Families;
+using AtlasTesting.ECS.Components;
+using AtlasTesting.ECS.Families;
 using System.Diagnostics;
 
-namespace AtlasTesting.Testing.Systems
+namespace AtlasTesting.ECS.Systems
 {
 	class TestSystem1 : AtlasFamilySystem<TestMember>, ITestSystem1
 	{

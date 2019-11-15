@@ -1,7 +1,7 @@
 ﻿using Atlas.ECS.Families;
-using AtlasTesting.Testing.Components;
+using AtlasTesting.ECS.Components;
 
-namespace AtlasTesting.Testing.Families
+namespace AtlasTesting.ECS.Families
 {
 	class TestMember : AtlasFamilyMember
 	{

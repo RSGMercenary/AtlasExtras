@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AtlasTesting.Framework.Geometry
+namespace AtlasTesting.Geometry
 {
 	class Vector3 : Vector3<Vector3>
 	{

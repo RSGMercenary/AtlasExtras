@@ -2,8 +2,8 @@
 using Atlas.ECS.Components.Engine;
 using Atlas.ECS.Components.SystemManager;
 using Atlas.ECS.Entities;
-using AtlasTesting.Testing.Components;
-using AtlasTesting.Testing.Systems;
+using AtlasTesting.ECS.Components;
+using AtlasTesting.ECS.Systems;
 using System;
 using System.Diagnostics;
 
@@ -46,7 +46,7 @@ namespace AtlasTesting
 			if(0 == depth--)
 				return;
 			for(var i = 0; i < children; ++i)
-				AddChildren(parent.AddChild(parent.GlobalName + "-" + i), children, depth);
+				AddChildren(parent.AddChild(parent.GlobalName + "-" + i, true), children, depth);
 		}
 	}
 }
