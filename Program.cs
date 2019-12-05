@@ -11,23 +11,17 @@ namespace AtlasTesting
 {
 	static public class Program
 	{
-		private static IEntity root;
-
 		[STAThread]
 		static void Main()
 		{
-			//LineCounter.FileLines();
-			//LineCounter.FolderLines(70, 4, true);
-
-			root = new AtlasEntity(true);
-
+			var root = AtlasEntity.GetRoot();
 			var engine = root.AddComponent<IEngine, JsonEngine>();
 
 			for(int index1 = 1; index1 <= 5; ++index1)
 			{
 				string name = index1.ToString();
 				var depth1 = root.AddChild(name, name);
-				depth1.AddComponent<ISystemManager>(new SystemManager(typeof(ITestSystem1)));
+				depth1.AddComponent<ISystemManager>(new AtlasSystemManager(typeof(ITestSystem1)));
 				for(int index2 = 1; index2 <= 5; ++index2)
 				{
 					name = index1 + "-" + index2;
@@ -46,7 +40,7 @@ namespace AtlasTesting
 			if(0 == depth--)
 				return;
 			for(var i = 0; i < children; ++i)
-				AddChildren(parent.AddChild(parent.GlobalName + "-" + i, true), children, depth);
+				AddChildren(parent.AddChild(parent.GlobalName + "-" + i), children, depth);
 		}
 	}
 }

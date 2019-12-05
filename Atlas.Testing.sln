@@ -6,8 +6,11 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atlas.Testing", "Atlas.Testing.csproj", "{1D495DFE-DBCA-4355-9237-8EA7001ECE98}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atlas.ECS", "..\Atlas.ECS\Atlas.ECS.csproj", "{A2BD5528-A70E-4475-AD4B-C24344CABC05}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DAD74AFD-3949-4443-943E-6A5BCFC492BF} = {DAD74AFD-3949-4443-943E-6A5BCFC492BF}
+	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atlas.Signals", "..\Atlas.Signals\Atlas.Signals.csproj", "{D6AE4CA3-5201-4011-A6CF-1ACDFA510AA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atlas.Signals", "..\Atlas.Signals\Atlas.Signals.csproj", "{DAD74AFD-3949-4443-943E-6A5BCFC492BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +26,10 @@ Global
 		{A2BD5528-A70E-4475-AD4B-C24344CABC05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2BD5528-A70E-4475-AD4B-C24344CABC05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2BD5528-A70E-4475-AD4B-C24344CABC05}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D6AE4CA3-5201-4011-A6CF-1ACDFA510AA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6AE4CA3-5201-4011-A6CF-1ACDFA510AA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6AE4CA3-5201-4011-A6CF-1ACDFA510AA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6AE4CA3-5201-4011-A6CF-1ACDFA510AA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAD74AFD-3949-4443-943E-6A5BCFC492BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD74AFD-3949-4443-943E-6A5BCFC492BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD74AFD-3949-4443-943E-6A5BCFC492BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD74AFD-3949-4443-943E-6A5BCFC492BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
