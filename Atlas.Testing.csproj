@@ -1,17 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<!--<Project Sdk="Microsoft.NET.Sdk">-->
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AssemblyName>AtlasTesting</AssemblyName>
+	<OutputType>Exe</OutputType>
+	<TargetFramework>netcoreapp3.1</TargetFramework>
+	<AssemblyName>AtlasTesting</AssemblyName>
+	<UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+	<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Atlas.ECS\Atlas.ECS.csproj" />
+	<ProjectReference Include="..\Atlas.ECS\Atlas.ECS.csproj" />
   </ItemGroup>
 
 </Project>
