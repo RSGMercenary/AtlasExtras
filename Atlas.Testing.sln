@@ -1,16 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29503.13
+VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atlas.Testing", "Atlas.Testing.csproj", "{1D495DFE-DBCA-4355-9237-8EA7001ECE98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atlas.Testing", "Atlas.Testing.csproj", "{777B2A85-6313-40D8-B0CB-A0878685FAC0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atlas.ECS", "..\Atlas.ECS\Atlas.ECS.csproj", "{A2BD5528-A70E-4475-AD4B-C24344CABC05}"
-	ProjectSection(ProjectDependencies) = postProject
-		{DAD74AFD-3949-4443-943E-6A5BCFC492BF} = {DAD74AFD-3949-4443-943E-6A5BCFC492BF}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atlas.ECS", "..\Atlas.ECS\Atlas.ECS.csproj", "{098B4AD4-D297-46FA-87C9-A3AFD97551FE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atlas.Signals", "..\Atlas.Signals\Atlas.Signals.csproj", "{DAD74AFD-3949-4443-943E-6A5BCFC492BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atlas.Signals", "..\Atlas.Signals\Atlas.Signals.csproj", "{B4691A49-6732-4B57-A852-7EAEA7DDF743}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,23 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1D495DFE-DBCA-4355-9237-8EA7001ECE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1D495DFE-DBCA-4355-9237-8EA7001ECE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1D495DFE-DBCA-4355-9237-8EA7001ECE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1D495DFE-DBCA-4355-9237-8EA7001ECE98}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A2BD5528-A70E-4475-AD4B-C24344CABC05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A2BD5528-A70E-4475-AD4B-C24344CABC05}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A2BD5528-A70E-4475-AD4B-C24344CABC05}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A2BD5528-A70E-4475-AD4B-C24344CABC05}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DAD74AFD-3949-4443-943E-6A5BCFC492BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DAD74AFD-3949-4443-943E-6A5BCFC492BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DAD74AFD-3949-4443-943E-6A5BCFC492BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DAD74AFD-3949-4443-943E-6A5BCFC492BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{777B2A85-6313-40D8-B0CB-A0878685FAC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{777B2A85-6313-40D8-B0CB-A0878685FAC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{777B2A85-6313-40D8-B0CB-A0878685FAC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{777B2A85-6313-40D8-B0CB-A0878685FAC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{098B4AD4-D297-46FA-87C9-A3AFD97551FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{098B4AD4-D297-46FA-87C9-A3AFD97551FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{098B4AD4-D297-46FA-87C9-A3AFD97551FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{098B4AD4-D297-46FA-87C9-A3AFD97551FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4691A49-6732-4B57-A852-7EAEA7DDF743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4691A49-6732-4B57-A852-7EAEA7DDF743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4691A49-6732-4B57-A852-7EAEA7DDF743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4691A49-6732-4B57-A852-7EAEA7DDF743}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E0A81029-C2A7-44C2-9621-2E588A169619}
+		SolutionGuid = {3D06E02D-1B24-4E85-9B02-E2FE3F518D72}
 	EndGlobalSection
 EndGlobal

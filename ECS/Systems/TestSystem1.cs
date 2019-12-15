@@ -1,4 +1,5 @@
-﻿using Atlas.ECS.Systems;
+﻿using Atlas.Core.Objects.Update;
+using Atlas.ECS.Systems;
 using AtlasTesting.ECS.Components;
 using AtlasTesting.ECS.Families;
 using System.Diagnostics;
@@ -9,7 +10,7 @@ namespace AtlasTesting.ECS.Systems
 	{
 		public TestSystem1()
 		{
-			Priority = -1000;
+			UpdateStep = TimeStep.Variable;
 			DeltaIntervalTime = 5;
 		}
 

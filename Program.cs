@@ -4,16 +4,25 @@ using Atlas.ECS.Components.SystemManager;
 using Atlas.ECS.Entities;
 using AtlasTesting.ECS.Components;
 using AtlasTesting.ECS.Systems;
-using System;
 using System.Diagnostics;
 
 namespace AtlasTesting
 {
 	static public class Program
 	{
-		[STAThread]
 		static void Main()
 		{
+			_ = new AtlasEntityBuilder()
+				.Start()
+				.AddComponent<ISystemManager, AtlasSystemManager>()
+				.SetAutoDispose(false)
+				.SetGlobalName("")
+				.SetLocalName("")
+				.SetSleeping(true)
+				.SetFreeSleeping(true)
+				.AddChild(AtlasEntity.Get())
+				.Finish();
+
 			var root = AtlasEntity.GetRoot();
 			var engine = root.AddComponent<IEngine, JsonEngine>();
 
